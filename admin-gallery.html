@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header><span class="logo">Admin panel</span><a href="admin-dashboard.html" style="margin-left:auto;">Back</a>
+  </header>
+  <div class="container">
+    <div style="display:flex; gap:20px; flex-wrap:wrap;">
+      <form id="gallery-form" onsubmit="return false;" style="flex:1; min-width:260px;">
+        <h3 style="margin-top:0;">Upload gallery image</h3>
+        <p style="font-size:12px;color:#777;margin:2px 0 12px;">Images are tagged the same way as resources, so albums
+          stay organized by event or batch.</p>
+        <label>File title</label>
+        <input type="text" id="gal-title">
+        <label>Category</label>
+        <select id="gal-category">
+          <option>Event album</option>
+          <option>Campus life</option>
+          <option>Competition</option>
+        </select>
+        <label>Batch number</label>
+        <input type="text" id="gal-batch">
+        <label>Image file</label>
+        <input type="file">
+        <p id="gallery-error" class="error"></p>
+        <button type="button" id="gallery-upload-btn" style="width:100%;">Upload</button>
+      </form>
+      <div style="flex:2; min-width:280px;">
+        <p class="section-title">Uploaded images</p>
+        <div class="gallery-grid" id="admin-gallery-grid"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>requireLogin();</script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Add / edit content</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header><span class="logo">Admin panel</span><a href="admin-dashboard.html" style="margin-left:auto;">Back</a>
+  </header>
+  <div class="container">
+    <form id="content-form" onsubmit="return false;">
+      <h3 id="form-title" style="margin-top:0;">Add new notice</h3>
+      <p style="font-size:12px;color:#777;margin:2px 0 12px;">Same form is used for notices, events, and jobs, switched
+        using the type field.</p>
+      <input type="hidden" id="type-field">
+      <label>Title</label>
+      <input type="text" id="title-field">
+      <label>Description</label>
+      <textarea id="desc-field" rows="4"></textarea>
+      <div style="display:flex; gap:10px;">
+        <div style="flex:1;"><label>Date</label><input type="date" id="date-field"></div>
+      </div>
+      <div id="company-row">
+        <label>Company name</label>
+        <input type="text" id="company-field">
+      </div>
+      <label>Attachment</label>
+      <input type="file">
+      <p id="form-error" class="error"></p>
+      <div class="btn-row">
+        <button type="button" id="save-draft-btn">Save as draft</button>
+        <button type="button" id="publish-btn">Publish</button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+  <script>requireLogin();</script>
+</body>
+
+</html>

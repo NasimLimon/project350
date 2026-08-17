@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Resources</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <span class="logo">Software Society</span>
+    <a href="index.html">Home</a>
+    <a href="notices.html">Notices</a>
+    <a href="events.html">Events</a>
+    <a href="resources.html">Resources</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="committee.html">About</a>
+    <a href="contact.html">Contact</a>
+  </header>
+  <div class="container">
+    <p class="section-title">Study resources</p>
+    <p style="font-size:13px;color:#777;margin:2px 0 14px;">Filter materials by batch and category, then download the
+      file you need directly.</p>
+    <div style="display:flex; gap:10px; margin-bottom:16px;">
+      <select id="filter-category"></select>
+      <select id="filter-batch"></select>
+    </div>
+    <div id="resource-list"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

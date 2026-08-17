@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="login-box">
+    <form id="login-form">
+      <h3 style="text-align:center; margin-top:0;">Admin login</h3>
+      <p style="font-size:12px;color:#777;margin:2px 0 12px;">Restricts dashboard access to committee members with valid
+        credentials.</p>
+      <label>Username</label>
+      <input type="text" id="username" required>
+      <label>Password</label>
+      <input type="password" id="password" required>
+      <p id="login-error" class="error"></p>
+      <button type="submit" style="width:100%;">Login</button>
+      <p style="font-size:11px;color:#999;margin-top:10px;text-align:center;">Demo credentials: admin / admin123</p>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

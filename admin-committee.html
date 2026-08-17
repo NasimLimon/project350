@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Committee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header><span class="logo">Admin panel</span><a href="admin-dashboard.html" style="margin-left:auto;">Back</a>
+  </header>
+  <div class="container">
+    <form id="committee-form" onsubmit="return false;" style="max-width:420px;">
+      <h3 style="margin-top:0;">Add committee member</h3>
+      <p style="font-size:12px;color:#777;margin:2px 0 12px;">Updates who appears on the public About page along with
+        their contact email.</p>
+      <label>Member name</label>
+      <input type="text" id="mem-name">
+      <label>Member role</label>
+      <input type="text" id="mem-role">
+      <label>Email link</label>
+      <input type="text" id="mem-email">
+      <label>Member photo</label>
+      <input type="file" id="mem-photo" accept="image/*">
+      <img id="mem-photo-preview" style="display:none; width:80px; height:80px; object-fit:cover; border-radius:50%; margin-top:8px;">
+      <p id="committee-error" class="error"></p>
+      <button type="button" id="committee-save-btn" style="width:100%;">Save</button>
+    </form>
+
+    <p class="section-title" style="margin-top:24px;">Current committee members</p>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+      <tbody id="committee-table-body"></tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+  <script>requireLogin();</script>
+</body>
+
+</html>
